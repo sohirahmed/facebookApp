@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch("http://localhost:3000/api/posts", {
+        headers: {
+          Authorization:
+            "Bearer " +
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiZHVsZmF0dGEuaGVzc2VpbkBnbWFpbC5jb20iLCJpYXQiOjE3MjYxNDQ0NTYsImV4cCI6MTcyNjE0ODA1NiwiaXNzIjoibG9jYWxob3N0OjMwMDAiLCJzdWIiOiI2NmUyYjA1ZDUxMzA0ZTRiNWY0YTQ4MTkifQ.D140iDzOEVixUw-lEwvlCXTh8v6Qct9wcfPOpgXTq9M",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    </script>
+  </body>
+</html>
